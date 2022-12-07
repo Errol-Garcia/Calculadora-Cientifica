@@ -17,18 +17,18 @@ public class CalcularResultado {
 
     public void recibirDisplay(String texto) {
         this.textoDisplay = texto;
-
-        System.out.println("Texto display = " + textoDisplay);
+        //System.out.println("Texto display = " + textoDisplay);
 
         Stack<String> polacaInversa = notacionPolacaInversa(textoDisplay);
 
-        System.out.println("\nPolaca inversa = " + polacaInversa);
+        //System.out.println("\nPolaca inversa = " + polacaInversa);
 
         Stack<String> invertida = invertida(polacaInversa);
+         evaluar(invertida);
 
-        System.out.println("\nInvertida = " + invertida);
-        System.out.println("\nEvaluar invertida = " + evaluar(invertida));
-        System.out.println("Resultado = " + resultado);
+        //System.out.println("\nInvertida = " + invertida);
+        //System.out.println("\nEvaluar invertida = " + evaluar(invertida));
+        //System.out.println("Resultado = " + resultado);
     }
 
     public double evaluar(Stack<String> pilaInvertida) {
@@ -49,7 +49,7 @@ public class CalcularResultado {
             //System.out.println("\nPila resultado [" + i + "] = " + pilaResultado);
         }
 
-        System.out.println("\nPila resultado = " + pilaResultado);
+        //System.out.println("\nPila resultado = " + pilaResultado);
 
         resultado = pilaResultado.peek();
         return resultado;
@@ -68,7 +68,7 @@ public class CalcularResultado {
         String[] tokens = tokenizar(inOrden);
 
         //tokenizar
-        System.out.println("\nTokens a Token\n");
+        //System.out.println("\nTokens a Token\n");
         int cont = 0;
         for (String token : tokens) {
             System.out.println("Token [" + cont + "] = " + token);
