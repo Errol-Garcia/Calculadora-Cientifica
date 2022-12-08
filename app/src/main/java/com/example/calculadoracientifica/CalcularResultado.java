@@ -1,12 +1,15 @@
 package com.example.calculadoracientifica;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class CalcularResultado {
-    String[] operadores = {"+", "-", "×", "÷", "^", "log", "sin", "cos", "tan", "(", ")"};
+    String cadenaDeOps = "+,-,×,÷,^,log,sin,cos,tan,(,)";
+    String[] operadores = cadenaDeOps.split(",");
+    //String[] operadores = {"+", "-", "×", "÷", "^", "log", "sin", "cos", "tan", "(", ")"};
     //String[] operadores = {"+", "-", "*", "/", "^"};
     int[] precedencia = {0, 0, 1, 1, 2, 3, 3, 3, 3, 3, 3};
+    String[] otrosSimbolos = {"%", "π", "e"};
     String textoDisplay;
     double resultado;
 
@@ -137,13 +140,31 @@ public class CalcularResultado {
     }
 
     public String[] tokenizar(String operacion) {
+        for (int i = 0; i < otrosSimbolos.length; i++) {
+            switch (operadores[i]) {
+                case "%":
+                    operacion = operacion.replaceAll(operadores[i], "÷100");
+                    break;
+                case "π":
+                    operacion = operacion.replaceAll(operadores[i], Math.PI+"");
+                    break;
+                case "e":
+                    operacion = operacion.replaceAll(operadores[i], Math.E+"");
+                    break;
+            }
+        }
+
         for (int i = 0; i < operadores.length; i++) {
-            if (operadores[i].equals("×")) {
-                operacion = operacion.replace(operadores[i], "#" + "*" + "#");
-            } else if (operadores[i].equals("÷")) {
-                operacion = operacion.replace(operadores[i], "#" + "/" + "#");
-            } else {
-                operacion = operacion.replace(operadores[i], "#" + operadores[i] + "#");
+            switch (operadores[i]) {
+                case "×":
+                    operacion = operacion.replace(operadores[i], "#" + "*" + "#");
+                    break;
+                case "÷":
+                    operacion = operacion.replace(operadores[i], "#" + "/" + "#");
+                    break;
+                default:
+                    operacion = operacion.replace(operadores[i], "#" + operadores[i] + "#");
+                    break;
             }
             //"+", "-", "×", "÷", "^"
             //operacion = operacion.replace(operadores[i], "#" + operadores[i] + "#");
