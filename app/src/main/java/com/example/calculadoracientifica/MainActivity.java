@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void initComponent() {
         this.txtDisplay = findViewById(R.id.txtDisplay);
-        this.btn1 = findViewById(R.id.btn1);
+        /*this.btn1 = findViewById(R.id.btn1);
         this.btn2 = findViewById(R.id.btn2);
         this.btn3 = findViewById(R.id.btn3);
         this.btn4 = findViewById(R.id.btn4);
-        this.btn5 = findViewById(R.id.btn5);
+        this.btn5 = findViewById(R.id.btn5);*/
         this.btn6 = findViewById(R.id.btn6);
         this.btn7 = findViewById(R.id.btn7);
         this.btn8 = findViewById(R.id.btn8);
@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.btn31:
-                comando = "1";
-                if (display.equals("0")) {
+                comando = btn31.getText().toString(); // 1
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn32:
-                comando = "2";
-                if (display.equals("0")) {
+                comando = btn32.getText().toString(); // 2
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn33:
-                comando = "3";
-                if (display.equals("0")) {
+                comando = btn33.getText().toString(); // 3
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -99,8 +99,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn26:
-                comando = "4";
-                if (display.equals("0")) {
+                comando = btn26.getText().toString(); // 4
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -108,8 +108,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn27:
-                comando = "5";
-                if (display.equals("0")) {
+                comando = btn27.getText().toString(); // 5
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -117,8 +117,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn28:
-                comando = "6";
-                if (display.equals("0")) {
+                comando = btn28.getText().toString(); // 6
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -126,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn21:
-                comando = "7";
-                if (display.equals("0")) {
+                comando = btn21.getText().toString(); // 7
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -135,8 +135,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn22:
-                comando = "8";
-                if (display.equals("0")) {
+                comando = btn22.getText().toString(); // 8
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -144,8 +144,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn23:
-                comando = "9";
-                if (display.equals("0")) {
+                comando = btn23.getText().toString(); // 9
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -153,8 +153,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn37:
-                comando = "0";
-                if (display.equals("0")) {
+                comando = btn37.getText().toString(); // 0
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -162,41 +162,42 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn34:
-                comando = "+";
-                if (display.equals("0")) {
-                    txtDisplay.setText(comando);
+                comando = btn34.getText().toString(); // +
+                if (display.equals("0") || display.contains("=")) {
+                    txtDisplay.setText("0" + comando);
                 } else {
                     txtDisplay.setText(display + comando);
                 }
                 break;
 
             case R.id.btn35:
-                comando = "-";
-                if (display.equals("0")) {
-                    txtDisplay.setText(comando);
+                comando = btn35.getText().toString(); // -
+                if (display.equals("0") || display.contains("=")) {
+                    txtDisplay.setText("0" + comando);
                 } else {
                     txtDisplay.setText(display + comando);
                 }
                 break;
             case R.id.btn29:
-                comando = "*";
-                if (display.equals("0")) {
-                    txtDisplay.setText(comando);
+                comando = btn29.getText().toString(); // *
+                if (display.equals("0") || display.contains("=")) {
+                    txtDisplay.setText("0" + comando);
                 } else {
                     txtDisplay.setText(display + comando);
                 }
                 break;
             case R.id.btn30:
-                comando = "/";
-                if (display.equals("0")) {
-                    txtDisplay.setText(comando);
+                comando = btn30.getText().toString(); // /
+                if (display.equals("0") || display.contains("=")) {
+                    txtDisplay.setText("0" + comando);
                 } else {
                     txtDisplay.setText(display + comando);
                 }
                 break;
             case R.id.btn7:
-                comando = "^2";
-                if (display.equals("0")) {
+                comando = btn7.getText().toString(); // ^2
+                comando = comando.substring(1);
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText("0" + comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -204,8 +205,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn8:
-                comando = "^";
-                if (display.equals("0")) {
+                comando = btn8.getText().toString(); // ^
+                comando = comando.substring(1,2);
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText("0" + comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -226,8 +228,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.btn38:
-                comando = "×10^";
-                if (display.equals("0")) {
+                comando = btn38.getText().toString(); // ×10^"
+                comando = comando.substring(0,3);
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText("0" + comando);
                 } else {
                     txtDisplay.setText(display + comando);
@@ -239,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             default:
-                if (display.equals("0")) {
+                if (display.equals("0") || display.contains("=")) {
                     txtDisplay.setText(comando);
                 } else {
                     txtDisplay.setText(display + comando);
