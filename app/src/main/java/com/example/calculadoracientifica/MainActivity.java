@@ -72,107 +72,126 @@ public class MainActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.btn31:
-                //comando = "1";
+                comando = "1";
                 if (display.equals("0")) {
-                    txtDisplay.setText("1");
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "1");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
             case R.id.btn32:
-                //comando = "2";
+                comando = "2";
                 if (display.equals("0")) {
-                    txtDisplay.setText("2");
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "2");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
             case R.id.btn33:
-                //comando = "3";
+                comando = "3";
                 if (display.equals("0")) {
-                    txtDisplay.setText("3");
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "3");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
             case R.id.btn26:
-                //comando = "4";
+                comando = "4";
                 if (display.equals("0")) {
-                    txtDisplay.setText("4");
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "4");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
             case R.id.btn27:
-                //comando = "1";
+                comando = "5";
                 if (display.equals("0")) {
-                    txtDisplay.setText("5");
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "5");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
             case R.id.btn28:
-                //comando = "6";
+                comando = "6";
                 if (display.equals("0")) {
-                    txtDisplay.setText("6");
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "6");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
             case R.id.btn21:
-                //comando = "7";
+                comando = "7";
                 if (display.equals("0")) {
-                    txtDisplay.setText("7");
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "7");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
             case R.id.btn22:
-                //comando = "1";
+                comando = "8";
                 if (display.equals("0")) {
-                    txtDisplay.setText("8");
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "8");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
             case R.id.btn23:
-                //comando = "1";
+                comando = "9";
                 if (display.equals("0")) {
-                    txtDisplay.setText("9");
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "9");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
             case R.id.btn37:
-                //comando = "1";
-                if (!display.equals("0")) {
-                    txtDisplay.setText("0");
+                comando = "0";
+                if (display.equals("0")) {
+                    txtDisplay.setText(comando);
                 } else {
-                    txtDisplay.setText(display + "0");
-                }
-            break;
-            case R.id.btn34:
-                //comando = "+";
-                if (!display.equals("0")) {
-                    txtDisplay.setText(display + "+");
+                    txtDisplay.setText(display + comando);
                 }
                 break;
+
+            case R.id.btn34:
+                comando = "+";
+                if (display.equals("0")) {
+                    txtDisplay.setText(comando);
+                } else {
+                    txtDisplay.setText(display + comando);
+                }
+                break;
+
             case R.id.btn35:
-                //comando = "-";
-                if (!display.equals("0")) {
-                    txtDisplay.setText(display + "-");
+                comando = "-";
+                if (display.equals("0")) {
+                    txtDisplay.setText(comando);
+                } else {
+                    txtDisplay.setText(display + comando);
                 }
                 break;
             case R.id.btn29:
-                //comando = "*";
-                if (!display.equals("0")) {
-                    txtDisplay.setText(display + "*");
+                comando = "*";
+                if (display.equals("0")) {
+                    txtDisplay.setText(comando);
+                } else {
+                    txtDisplay.setText(display + comando);
                 }
                 break;
             case R.id.btn30:
-                //comando = "/";
-                if (!display.equals("0")) {
-                    txtDisplay.setText(display + "/");
+                comando = "/";
+                if (display.equals("0")) {
+                    txtDisplay.setText(comando);
+                } else {
+                    txtDisplay.setText(display + comando);
                 }
                 break;
             case R.id.btn7:
@@ -202,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
 
-            case R.id.btn25:
+            case R.id.btn25: //CE
                 txtDisplay.setText("0");
                 break;
 
